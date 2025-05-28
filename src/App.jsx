@@ -11,7 +11,7 @@ function App() {
 
   const unsplashkey = 'Ptmb-E2uEGJsrVW3RkO22s0toOk7xqV2Q0vgFUFKuIs'
 
-async function imgfundo(query = 'nature') {
+  async function imgfundo(query = 'nature') {
   try {
     const response = await axios.get('https://api.unsplash.com/photos/random', {
       params: { query },
