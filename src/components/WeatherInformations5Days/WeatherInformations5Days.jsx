@@ -12,7 +12,7 @@ function WeatherInformations5Days({ weather5Days }) {
         }
     }
 
-    const next5DaysForecast = Object.values(dailyForecast).slice(1, 6)
+    const next5DaysForecast = Object.values(dailyForecast).slice(1,6)
 
     function convertDate(date) {
         const newDate = new Date(date.dt * 1000).toLocaleDateString('pt-BR', { weekday: 'long', day: '2-digit' })
@@ -20,7 +20,7 @@ function WeatherInformations5Days({ weather5Days }) {
     }
 
     return (
-        <div className='weather-container'>
+        <div className='weather5days-container'>
             <p>Próximos Dias</p>
             <div className='weather-days'>
                 {next5DaysForecast.map(forecast => (

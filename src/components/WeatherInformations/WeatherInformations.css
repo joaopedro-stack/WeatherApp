@@ -1,44 +1,51 @@
 .weather-container {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     gap: 20px;
+    display: flex;
+    background-color: #000;
+    opacity: 0.8;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    max-height: 200px;
+    padding: 20px;
+}
+
+.weather-img{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .weather-info {
     display: flex;
-    align-items: center;
     width: 100%;
-    color: #fff;
     justify-content: center;
+    flex-direction: column;
 }
 
 img {
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
 }
-
 
 h2 {
-    font-weight: bold;
+    font-size: 6em;
+    font-weight: 400;
 }
 
-.description {
+h3{
+    font-weight: 500;
     text-transform: capitalize;
-    font-size: 1.3em;
-    font-weight: bold;
 }
 
 .details {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     gap: 20px;
     flex-wrap: wrap;
     width: 90%;
-    font-size: 1.3em;
+    font-size: 1em;
     font-weight: 300;
 }
 
