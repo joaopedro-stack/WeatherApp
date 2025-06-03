@@ -15,7 +15,7 @@
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.2);
     padding: 10px;
-    width: 14%;
+    width: 18%;
     border-bottom: 3px solid #eb6a00;
 }
 
@@ -31,3 +31,46 @@
 p {
     font-size: 1.1em;
 }
+
+.x {
+    top: 0;
+    right: 0;
+    position: absolute;
+    padding: 10px;
+    font-size: 2em;
+}
+
+@media screen and (max-width:1300px) {
+
+    p {
+        font-size: .9em;
+    }
+
+}
+
+@media screen and (max-width:1000px) {
+    .day {
+        padding: 5px;
+    }
+
+    .weather-days {
+        gap: 10px;
+    }
+
+}
+
+@media screen and (max-width:750px) {
+    p {
+        font-size: .7em;
+    }
+
+    .day img{
+        width: 40px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .day{
+        width: 110px;
+    }
+}   

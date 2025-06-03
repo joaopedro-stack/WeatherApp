@@ -8,9 +8,10 @@
     align-items: center;
     max-height: 200px;
     padding: 20px;
+    width: 100%;
 }
 
-.weather-img{
+.weather-img {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -25,7 +26,7 @@
 
 img {
     width: 100px;
-    height: 100px;
+    height: auto;
 }
 
 h2 {
@@ -33,7 +34,7 @@ h2 {
     font-weight: 400;
 }
 
-h3{
+h3 {
     font-weight: 500;
     text-transform: capitalize;
 }
@@ -49,60 +50,73 @@ h3{
     font-weight: 300;
 }
 
+@media screen and (max-width:1600px) {
+
+
+    h2 {
+        font-size: 5em;
+    }
+
+    img {
+        width: 80px;
+    }
+
+}
+
 @media screen and (max-width:1300px) {
 
-    .box{
-        margin: 100px 0px;
-    }
-    
-    .weather-container h2{
-        font-size: 1.5em;
-    }
-    
-    .box5Days{
-        margin: 100px 0px;
+    .details {
+        width: 100%;
     }
 
 }
-        
+
 @media screen and (max-width:1000px) {
-    .box , .box5Days{
-        width: 80vw;
+
+    .details {
+        gap: 10px;
     }
 
-    .details{
-        width: 100%;
+    h2 {
+        font-size: 4em;
     }
 
-    .details p{
-        font-size: .8em;
+    img {
+        width: 65px;
+    }
+
+    .box {
+        width: 85%;
+    }
+
+}
+
+@media screen and (max-width:750px) {
+    h2 {
+        font-size: 3em;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+
+    img {
+        width: 50px;
+    }
+
+    .weather-container{
+        padding: 5px;
     }
 }
 
-@media screen and (max-width:500px) {
-    
-    h1 {
-        font-size: 1.5em;
+@media screen and (max-width:550px) {
 
-    }
-
-    
-
-    input{
-        font-size: .9em;
-        padding: 5px;
-        width: 70%;
-    }
-
-    .inputs{
-        justify-content: left;
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    button{
+    h3{
         font-size: .8em;
     }
 
-    
+    h2{
+        font-size: 2em;
+    }
+
 }

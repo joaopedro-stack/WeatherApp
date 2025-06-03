@@ -4,7 +4,7 @@ import './App.css'
 import WeatherInformations from './components/WeatherInformations/WeatherInformations'
 import WeatherInformations5Days from './components/WeatherInformations5Days/WeatherInformations5Days'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleUp, faAngleDown } from '@fortawesome/free-solid-svg-icons';
+import { faAngleUp, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   const [weather, setweather] = useState()
@@ -74,7 +74,7 @@ function App() {
       <div className='box'>
         <div className='inputs'>
           <input ref={inputref} type="text" onKeyDown={(e) => {
-            if(e.key === 'Enter'){
+            if (e.key === 'Enter') {
               searchCity();
             }
           }} placeholder='Digite o nome da Cidade' />
@@ -86,23 +86,25 @@ function App() {
         <FontAwesomeIcon
           className='btn'
           onClick={proximosdias}
-          icon={show5Days ? faAngleDown : faAngleUp}
+          icon={show5Days ? '' : faAngleUp}
         />
       </div>
 
       {weather && (
+        <div className={`boxToday ${!show5Days ? 'ativaToday' : ''}`}>
+          <WeatherInformations weather={weather} />
+        </div>
+      )}
+
+      {weather5Days && (
         <div className='content'>
           <div className={`box5Days ${show5Days ? 'ativa' : 'inativa'}`}>
+            <FontAwesomeIcon className='x' onClick={proximosdias} icon="fa-solid fa-xmark" />
             {weather5Days && <WeatherInformations5Days weather5Days={weather5Days} />}
           </div>
         </div>
       )}
 
-      {weather5Days && (
-        <div className={`boxToday ${!show5Days ? 'ativaToday' : ''}`}>
-          <WeatherInformations weather={weather} />
-        </div>
-      )}
 
     </>
   )
